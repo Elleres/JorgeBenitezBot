@@ -25,8 +25,7 @@ async def on_ready():
 
 async def main():
     async with bot:
-        discord.opus.load_opus('/opt/homebrew/lib/libopus.0.dylib')
-        await bot.load_extension("bot.extensions.music")
+        await bot.load_extension("extensions.music")
         await bot.start(TOKEN)
 
 asyncio.run(main())
